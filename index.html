@@ -11,11 +11,11 @@
       href="https://fonts.googleapis.com/css?family=Montserrat"
     />
 
-    <link
+<!--     <link
       rel="stylesheet"
       href="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/flickity.css"
       media="screen"
-    />
+    /> -->
 
     <style>
       body {
@@ -139,6 +139,94 @@
       .gallery-cell {
   width: 100%;
 }
+      
+      
+      
+      
+      
+      
+/* external css: flickity.css */
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body { font-family: sans-serif; }
+
+.gallery {
+  background: #EEE;
+}
+
+.gallery-cell {
+  width: 100%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+.gallery-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+
+/* big buttons, no circle */
+.flickity-prev-next-button {
+  width: 100px;
+  height: 100px;
+  background: transparent;
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+  fill: white;
+}
+.flickity-prev-next-button.no-svg {
+  color: white;
+}
+.flickity-prev-next-button:hover {
+  background: transparent;
+}
+/* hide disabled button */
+.flickity-prev-next-button:disabled {
+  display: none;
+}
+
+/* position dots in gallery */
+.flickity-page-dots {
+  bottom: 0px;
+}
+/* white circles */
+.flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: transparent;
+  border: 2px solid white;
+}
+/* fill-in selected dot */
+.flickity-page-dots .dot.is-selected {
+  background: white;
+}      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
     </style>
   </head>
 
@@ -285,7 +373,7 @@
           <div class="main-gallery js-flickity">
 <!--   data-flickity-options='{ "cellAlign": "left", "contain": true }'> -->
             <!-- images from unsplash.com -->
-            <div class="carousel-cell">
+            <div class="gallery-cell">
               <img
                 src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20230829_071750927.jpg?v=1742623644773"
                 alt="orange tree"
@@ -297,7 +385,7 @@
                 ><br /><span> (Koka, Japan - August 2023)</span>
               </p>
             </div>
-            <div class="carousel-cell">
+            <div class="gallery-cell">
               <img
                 src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240528_134805205.MP.jpg?v=1742623704437"
                 alt="orange tree"
@@ -309,7 +397,7 @@
               </p>
             </div>
 
-            <div class="carousel-cell">
+            <div class="gallery-cell">
               <img
                 src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240528_145249350.MP.jpg?v=1742623713024"
                 alt="orange tree"
@@ -321,7 +409,7 @@
               </p>
             </div>
 
-            <div class="carousel-cell">
+            <div class="gallery-cell">
               <img
                 src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/20240617_120921.jpg?v=1742625514701"
                 alt="orange tree"
@@ -332,7 +420,7 @@
               </p>
             </div>
 
-            <div class="carousel-cell">
+            <div class="gallery-cell">
               <img
                 src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240731_142431986.MP.jpg?v=1742623724424"
                 alt="orange tree"
@@ -344,7 +432,7 @@
               </p>
             </div>
 
-            <div class="carousel-cell">
+            <div class="gallery-cell">
               <img
                 src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240731_144044489.jpg?v=1742623761442"
                 alt="orange tree"
@@ -356,7 +444,7 @@
               </p>
             </div>
 
-            <div class="carousel-cell">
+            <div class="gallery-cell">
               <img
                 src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240802_123858455.jpg?v=1742623773894"
                 alt="orange tree"
@@ -369,7 +457,7 @@
               </p>
             </div>
 
-            <div class="carousel-cell">
+            <div class="gallery-cell">
               <img
                 src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240805_103728608.MP.jpg?v=1742623792996"
                 alt="orange tree"
@@ -382,20 +470,8 @@
               </p>
             </div>
 
-            <div class="carousel-cell">
-              <img
-                src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240805_103728608.MP.jpg?v=1742623792996"
-                alt="orange tree"
-              />
-              <p class="caption">
-                <span
-                  >Operating EISCAT Tromso (kidding!). Thank for the tour, Erik
-                  Varberg! </span
-                ><br /><span> (Near Tromso, Norway - August 2024)</span>
-              </p>
-            </div>
 
-            <div class="carousel-cell">
+            <div class="gallery-cell">
               <img
                 src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240911_142701463.MP.jpg?v=1742623812098"
                 alt="orange tree"
