@@ -15,6 +15,25 @@
         font-family: Arial, sans-serif;
         color: black;
       }
+          /* Container for the two columns */
+    .container {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+    
+    /* Style for the image column */
+    .image-column {
+      flex: 1;
+      margin-right: 20px;
+    }
+
+    /* Style for the text column */
+    .text-column {
+      flex: 1;
+              background-color: #970c10;
+        color: white;
+    }
       .slideshow-container {
         position: relative;
         max-width: 600px;
@@ -111,6 +130,15 @@
       .section p {
         color: #666;
       }
+      
+          header {
+      background-color: black;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+    }
+      
     </style>
   </head>
 
@@ -127,61 +155,31 @@
             <!--Bottom left box to contain details-->
             <container class="HP-LEFT-TITLES">
               <!--Box to contain titles-->
-              <h2 id="NAME">Lindsay V. Goodwin - Assistant Professor</h2>
+                <header>
+    Lindsay V. Goodwin - Assistant Professor
+  </header>
 
         <div
-          style="background-color: black; padding: 30px 0; top margin = -30 px"
+          style="background-color: black; padding: 30px 0; margin-top: -60px"
         ></div>
               
-              <br />
-
-              <img
+              
+              
+              
+  <div class="container">
+    <!-- Image Column -->
+    <div class="image-column">
+                    <img
                 src="https://cdn.glitch.global/d90d898c-ea49-457b-9a88-a5140a129092/20241112_181407.jpg?v=1733102265805"
                 width="400px"
               />
+      
 
-              <h3>Email: lindsay.v.goodwin@njit.edu</h3>
-            </container>
-          </div>
-        </div>
+    </div>
 
-        <div class="HP-RIGHT">
-          <!--Right box of AbMe Section-->
-
-          <p><em> </em></p>
-          <a
-            href="https://www.linkedin.com/in/lindsay-v-goodwin/"
-            style="text-decoration: none"
-          >
-            <!--Anchor linking to social media-->
-            <img
-              src="https://cdn.glitch.global/d90d898c-ea49-457b-9a88-a5140a129092/174857.png?v=1733118424075"
-              alt="LinkedIn IMG"
-              width="70"
-            />
-            <!--Image contained in anchor class that takes up entire class and displays Alt text-->
-          </a>
-
-          &nbsp &nbsp
-          <a
-            class="SCHOLAR"
-            href="https://scholar.google.ca/citations?user=94fPC1EAAAAJ&hl=en"
-            style="text-decoration: none"
-          >
-            <!--Anchor linking to social media-->
-            <img
-              src="https://cdn.glitch.global/d90d898c-ea49-457b-9a88-a5140a129092/google-scholar-icon-2048x2048-sjbhklt7.png?v=1733118080695"
-              width="70"
-            />
-            <!--Image contained in anchor class that takes up entire class and displays Alt text-->
-          </a>
-        </div>
-      </div>
-    </center>
-
-    <div class="HP-ABME-STMT">
-      <button class="collapsible">About Me</button>
-      <div class="content">
+    <!-- Text Column -->
+    <div class="text-column">
+      
         <p>
           My name is Lindsay Goodwin, and I am an Assistant Professor at the New
           Jersey Institute of Technology working in the
@@ -259,8 +257,60 @@
               </div>
             </li>
           </ul>
+      
+      
+    </div>
+  </div>              
+              
+              
+              
+              
+              
+              
+              
+              
+
+            </container>
+          </div>
+        </div>
+
+        <div class="HP-RIGHT">
+          <!--Right box of AbMe Section-->
+
+          <p><em> </em></p>
+          <a
+            href="https://www.linkedin.com/in/lindsay-v-goodwin/"
+            style="text-decoration: none"
+          >
+            <!--Anchor linking to social media-->
+            <img
+              src="https://cdn.glitch.global/d90d898c-ea49-457b-9a88-a5140a129092/174857.png?v=1733118424075"
+              alt="LinkedIn IMG"
+              width="70"
+            />
+            <!--Image contained in anchor class that takes up entire class and displays Alt text-->
+          </a>
+
+          &nbsp &nbsp
+          <a
+            class="SCHOLAR"
+            href="https://scholar.google.ca/citations?user=94fPC1EAAAAJ&hl=en"
+            style="text-decoration: none"
+          >
+            <!--Anchor linking to social media-->
+            <img
+              src="https://cdn.glitch.global/d90d898c-ea49-457b-9a88-a5140a129092/google-scholar-icon-2048x2048-sjbhklt7.png?v=1733118080695"
+              width="70"
+            />
+            <!--Image contained in anchor class that takes up entire class and displays Alt text-->
+            <p><em> </em></p>
+            Email: lindsay.v.goodwin@njit.edu
+          </a>
         </div>
       </div>
+    </center>
+
+
 
       <div id="PROJECTS-AND-RESEARCH-TEAM">
         <button class="collapsible">
