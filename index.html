@@ -29,6 +29,7 @@
       .active {
         display: block;
       }
+
       .caption {
         text-align: center;
         font-size: 18px;
@@ -51,8 +52,7 @@
       .next {
         right: -50px;
       }
-    </style>
-    <style>
+
       a:link {
         color: red;
         background-color: transparent;
@@ -75,6 +75,41 @@
         color: #970c10;
         background-color: transparent;
         text-decoration: underline;
+      }
+      /* Style for collapsible buttons */
+      .collapsible {
+        background-color: #333;
+        color: white;
+        cursor: pointer;
+        padding: 10px 15px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        font-size: 18px;
+        margin: 5px 0;
+      }
+
+      .collapsible:hover {
+        background-color: #444;
+      }
+
+      /* Collapsible content */
+      .content {
+        padding: 10px 15px;
+        display: none;
+        overflow: hidden;
+        background-color: #f1f1f1;
+        margin-bottom: 10px;
+        border-radius: 5px;
+      }
+
+      .section h2 {
+        margin-top: 0;
+        color: #333;
+      }
+
+      .section p {
+        color: #666;
       }
     </style>
   </head>
@@ -158,7 +193,6 @@
 
               <br />
 
-
               <h3>Email: lindsay.v.goodwin@njit.edu</h3>
             </container>
           </div>
@@ -198,7 +232,19 @@
       </div>
     </center>
 
+    <!-- Section 1: Home -->
+    <div class="section" id="home">
+      <button class="collapsible">Home Section</button>
+      <div class="content">
+        <h2>Welcome to My Website!</h2>
+        <p>
+          This is the home section of the website where you can get an overview.
+        </p>
+      </div>
+    </div>
+
     <div class="HP-ABME-STMT">
+      <button class="collapsible">About Me</button>
       <!--Box containing About Me summary-->
       <center>
         <!--Top right box containing two images and a heading-->
@@ -433,43 +479,37 @@
           >
         </p>
 
-        
-              <script>
-                let slideIndex = 0;
-                const slides = document.querySelectorAll(".slide");
-                const captions = document.querySelectorAll(".caption");
+        <script>
+          let slideIndex = 0;
+          const slides = document.querySelectorAll(".slide");
+          const captions = document.querySelectorAll(".caption");
 
-                function showSlide(index) {
-                  slides.forEach((slide) => (slide.style.display = "none"));
-                  captions.forEach(
-                    (caption) => (caption.style.display = "none")
-                  );
-                  slides[index].style.display = "block";
-                  captions[index].style.display = "block";
-                }
+          function showSlide(index) {
+            slides.forEach((slide) => (slide.style.display = "none"));
+            captions.forEach((caption) => (caption.style.display = "none"));
+            slides[index].style.display = "block";
+            captions[index].style.display = "block";
+          }
 
-                function nextSlide() {
-                  slideIndex = (slideIndex + 1) % slides.length;
-                  showSlide(slideIndex);
-                }
+          function nextSlide() {
+            slideIndex = (slideIndex + 1) % slides.length;
+            showSlide(slideIndex);
+          }
 
-                function prevSlide() {
-                  slideIndex = (slideIndex - 1 + slides.length) % slides.length;
-                  showSlide(slideIndex);
-                }
+          function prevSlide() {
+            slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+            showSlide(slideIndex);
+          }
 
-                function autoSlide() {
-                  nextSlide();
-                  setTimeout(autoSlide, 5000);
-                }
+          function autoSlide() {
+            nextSlide();
+            setTimeout(autoSlide, 5000);
+          }
 
-                showSlide(slideIndex);
-                setTimeout(autoSlide, 5000);
-              </script>
-        
-        
-        
-        
+          showSlide(slideIndex);
+          setTimeout(autoSlide, 5000);
+        </script>
+
         <button class="nav-button next" onclick="nextSlide()">&#9655;</button>
       </div>
     </div>
@@ -637,5 +677,27 @@
         </container>
       </div>
     </div>
+
+    <script>
+      // JavaScript for collapsible sections
+      const collapsibles = document.querySelectorAll(".collapsible");
+
+      collapsibles.forEach((button) => {
+        button.addEventListener("click", function () {
+          // Toggle the "active" class
+          this.classList.toggle("active");
+
+          // Get the associated content section
+          const content = this.nextElementSibling;
+
+          // Toggle the display of the content section
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      });
+    </script>
   </body>
 </html>
