@@ -10,6 +10,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Montserrat"
     />
+    <link rel="stylesheet" href="flickity.css" media="screen" />
     <!--Link to CSS Font Sheet, imports the Montserrat font-->
     <style>
       body {
@@ -17,7 +18,7 @@
         color: #3e3e3e;
         max-width: 800px;
         margin-left: auto;
-        margin-right: auto
+        margin-right: auto;
       }
       .slideshow-container {
         position: relative;
@@ -261,7 +262,21 @@
               </li>
             </ul>
           </div>
+          <script src="flickity.pkgd.min.js"></script>
 
+          <div class="gallery js-flickity">
+            <div class="gallery-cell"></div>
+            <div class="gallery-cell"></div>
+            <div class="gallery-cell"></div>
+            <div class="gallery-cell"></div>
+            <div class="gallery-cell"></div>
+          </div>
+
+          
+          
+          
+          
+          
           <div class="slideshow-container">
             <button class="nav-button prev" onclick="prevSlide()">
               &#9665;
