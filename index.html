@@ -23,7 +23,6 @@
         padding-right: 4px;
       }
 
-
       a:link {
         color: #970c10;
         background-color: transparent;
@@ -47,7 +46,7 @@
         background-color: transparent;
         text-decoration: underline;
       }
-      
+
       /* Style for collapsible buttons */
       .collapsible {
         background-color: #970c10;
@@ -90,93 +89,102 @@
         max-width: 400px;
       }
 
+      /* external css: flickity.css */
 
-/* external css: flickity.css */
+      * {
+        box-sizing: border-box;
+      }
 
-* { box-sizing: border-box; }
+      body {
+        font-family: sans-serif;
+      }
 
+      .carousel {
+        background: black;
+      }
 
+      .carousel-cell {
+        width: 70%;
+        height: 200px;
+        /* flex-box, center image in cell */
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
 
-.gallery {
-  background: black;
-}
+      .carousel-cell img {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        /* dim unselected */
+        opacity: 0.7;
+        -webkit-transform: scale(0.85);
+        transform: scale(0.85);
+        -webkit-filter: blur(5px);
+        filter: blur(5px);
+        -webkit-transition: opacity 0.3s, -webkit-transform 0.3s, transform 0.3s,
+          -webkit-filter 0.3s, filter 0.3s;
+        transition: opacity 0.3s, transform 0.3s, filter 0.3s;
+      }
 
-.gallery-cell {
-  width: 70%;
-  height: 200px;
-  /* flex-box, center image in cell */
-  display: -webkit-box;
-  display: -webkit-flex;
-  display:         flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-          justify-content: center;
-  -webkit-align-items: center;
-          align-items: center;
-}
+      /* brighten selected image */
+      .carousel-cell.is-selected img {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-filter: none;
+        filter: none;
+      }
 
-.gallery-cell img {
-  display: block;
-  max-width: 100%;
-  max-height: 100%;
-  /* dim unselected */
-  opacity: 0.7;
-  -webkit-transform: scale(0.85);
-          transform: scale(0.85);
-  -webkit-filter: blur(5px);
-          filter: blur(5px);
-  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s, transform 0.3s, -webkit-filter 0.3s, filter 0.3s;
-          transition: opacity 0.3s, transform 0.3s, filter 0.3s;
-}
+      @media screen and (min-width: 768px) {
+        .carousel-cell {
+          height: 400px;
+        }
+      }
 
-/* brighten selected image */
-.gallery-cell.is-selected img {
-  opacity: 1;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-filter: none;
-          filter: none;
-}
+      @media screen and (min-width: 960px) {
+        .carousel-cell {
+          width: 60%;
+        }
+      }
 
-@media screen and ( min-width: 768px ) {
-  .gallery-cell {
-    height: 400px;
-  }
-}
-
-@media screen and ( min-width: 960px ) {
-  .gallery-cell {
-    width: 60%;
-  }
-}
-
-/* buttons, no circle */
-.flickity-prev-next-button {
-  width: 60px;
-  height: 60px;
-  background: transparent;
-  opacity: 0.6;
-}
-.flickity-prev-next-button:hover {
-  background: transparent;
-  opacity: 1;
-}
-/* arrow color */
-.flickity-prev-next-button .arrow {
-  fill: white;
-}
-.flickity-prev-next-button.no-svg {
-  color: white;
-}
-/* closer to edge */
-.flickity-prev-next-button.previous { left: 0; }
-.flickity-prev-next-button.next { right: 0; }
-/* hide disabled button */
-.flickity-prev-next-button:disabled {
-  display: none;
-}
-      
-      
+      /* buttons, no circle */
+      .flickity-prev-next-button {
+        width: 60px;
+        height: 60px;
+        background: transparent;
+        opacity: 0.6;
+      }
+      .flickity-prev-next-button:hover {
+        background: transparent;
+        opacity: 1;
+      }
+      /* arrow color */
+      .flickity-prev-next-button .arrow {
+        fill: white;
+      }
+      .flickity-prev-next-button.no-svg {
+        color: white;
+      }
+      /* closer to edge */
+      .flickity-prev-next-button.previous {
+        left: 0;
+      }
+      .flickity-prev-next-button.next {
+        right: 0;
+      }
+      /* hide disabled button */
+      .flickity-prev-next-button:disabled {
+        display: none;
+      }
+      .flickity-page-dots {
+        display: none;
+      }
     </style>
   </head>
 
@@ -315,7 +323,6 @@
               </li>
             </ul>
           </div>
-
         </div>
       </div>
     </details>
@@ -518,146 +525,142 @@
         </a>
       </center>
     </font>
-    
-    
-          <script src="flickity.pkgd.min.js"></script>
 
-          <!-- Flickity HTML init -->
-          <div class="main-gallery js-flickity">
-            <!--   data-flickity-options='{ "cellAlign": "left", "contain": true }'> -->
-            <!-- images from unsplash.com -->
-            <div class="gallery-cell">
-              <img
-                src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20230829_071750927.jpg?v=1742623644773"
-                alt="orange tree"
-              />
-<!--               <figcaption>
+    <script src="flickity.pkgd.min.js"></script>
+
+    <div class="carousel js-flickity">
+      <!-- images from unsplash.com -->
+      <div class="carousel-cell">
+        <img
+          src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20230829_071750927.jpg?v=1742623644773"
+          alt="orange tree"
+        />
+        <!--               <figcaption>
                 Visiting the Mu Radar - Thank you for the tour, Professor
                 Yamamoto! (Koka, Japan - August 2023)
               </figcaption> -->
-            </div>
-            <div class="gallery-cell">
-              <img
-                src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240528_134805205.MP.jpg?v=1742623704437"
-                alt="orange tree"
-              />
-<!--               <figcaption>
+      </div>
+      <div class="carousel-cell">
+        <img
+          src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240528_134805205.MP.jpg?v=1742623704437"
+          alt="orange tree"
+        />
+        <!--               <figcaption>
                 At the Royal Greenwich Observatory! (London, England - May 2024)
               </figcaption> -->
-            </div>
+      </div>
 
-            <div class="gallery-cell">
-              <img
-                src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240528_145249350.MP.jpg?v=1742623713024"
-                alt="orange tree"
-              />
-<!--               <figcaption>
+      <div class="carousel-cell">
+        <img
+          src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240528_145249350.MP.jpg?v=1742623713024"
+          alt="orange tree"
+        />
+        <!--               <figcaption>
                 At the Royal Greenwich Observatory! (London, England - May 2024)
               </figcaption> -->
-            </div>
+      </div>
 
-            <div class="gallery-cell">
-              <img
-                src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/20240617_120921.jpg?v=1742625514701"
-                alt="orange tree"
-              />
-<!--               <figcaption>
+      <div class="carousel-cell">
+        <img
+          src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/20240617_120921.jpg?v=1742625514701"
+          alt="orange tree"
+        />
+        <!--               <figcaption>
                 Crawling on the Expanded Owens Valley Solar Array (Owens Valley,
                 USA - June 2024)
               </figcaption> -->
-            </div>
+      </div>
 
-            <div class="gallery-cell">
-              <img
-                src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240731_142431986.MP.jpg?v=1742623724424"
-                alt="orange tree"
-              />
+      <div class="carousel-cell">
+        <img
+          src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240731_142431986.MP.jpg?v=1742623724424"
+          alt="orange tree"
+        />
 
-<!--               <figcaption>
+        <!--               <figcaption>
                 Visiting EISCAT3D (Skibotn, Norway - July 2024)
               </figcaption> -->
-            </div>
+      </div>
 
-            <div class="gallery-cell">
-              <img
-                src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240731_144044489.jpg?v=1742623761442"
-                alt="orange tree"
-              />
-<!--               <figcaption>
+      <div class="carousel-cell">
+        <img
+          src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240731_144044489.jpg?v=1742623761442"
+          alt="orange tree"
+        />
+        <!--               <figcaption>
                 Visiting EISCAT3D (Skibotn, Norway - July 2024)
               </figcaption> -->
-            </div>
+      </div>
 
-            <div class="gallery-cell">
-              <img
-                src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240802_123858455.jpg?v=1742623773894"
-                alt="orange tree"
-              />
+      <div class="carousel-cell">
+        <img
+          src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240802_123858455.jpg?v=1742623773894"
+          alt="orange tree"
+        />
 
-<!--               <figcaption>
+        <!--               <figcaption>
                 Presenting at the 2024 EISCAT Symposium. Thank for the invite!
                 (Tromso, Norway - August 2024)
               </figcaption> -->
-            </div>
+      </div>
 
-            <div class="gallery-cell">
-              <img
-                src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240805_103728608.MP.jpg?v=1742623792996"
-                alt="orange tree"
-              />
+      <div class="carousel-cell">
+        <img
+          src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240805_103728608.MP.jpg?v=1742623792996"
+          alt="orange tree"
+        />
 
-<!--               <figcaption>
+        <!--               <figcaption>
                 Operating EISCAT Tromso (kidding!). Thank for the tour, Erik
                 Varberg! (Near Tromso, Norway - August 2024)
               </figcaption> -->
-            </div>
+      </div>
 
-            <div class="gallery-cell">
-              <img
-                src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240911_142701463.MP.jpg?v=1742623812098"
-                alt="orange tree"
-              />
+      <div class="carousel-cell">
+        <img
+          src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240911_142701463.MP.jpg?v=1742623812098"
+          alt="orange tree"
+        />
 
-<!--               <figcaption>
+        <!--               <figcaption>
                 Me, with a totally reasonable car, at the GIGI meeting. Thank
                 you for the invite! (Boulder, USA - September 2024)
               </figcaption> -->
-            </div>
+      </div>
 
-            <div class="gallery-cell">
-              <img
-                src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20241208_182020978.jpg?v=1742625525638"
-                alt="orange tree"
-              />
+      <div class="carousel-cell">
+        <img
+          src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20241208_182020978.jpg?v=1742625525638"
+          alt="orange tree"
+        />
 
-              <figcaption>
+        <!--               <figcaption>
                 AGU 2024 (Washington, USA - December 2024)
-              </figcaption>
-            </div>
+              </figcaption> -->
+      </div>
 
-            <div class="gallery-cell">
-              <img
-                src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20250127_155950182.jpg?v=1742625521518"
-                alt="orange tree"
-              />
-              <figcaption>
+      <div class="carousel-cell">
+        <img
+          src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20250127_155950182.jpg?v=1742625521518"
+          alt="orange tree"
+        />
+        <!--               <figcaption>
                 Selfie with the upcoming FLARE instrument at PPPL. Thank you for
                 the tour! (Princeton, USA - January 2025)
-              </figcaption>
-            </div>
+              </figcaption> -->
+      </div>
 
-            <div class="gallery-cell">
-              <img
-                src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20250207_003359998.jpg?v=1742623818889"
-                alt="orange tree"
-              />
+      <div class="carousel-cell">
+        <img
+          src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20250207_003359998.jpg?v=1742623818889"
+          alt="orange tree"
+        />
 
-              <figcaption>
+        <!--               <figcaption>
                 Presenting a the STAR Monthly Meeting. Thank you for having me!
                 (Brookdale Community College, USA - February 2025)
-              </figcaption>
-            </div>
-          </div>    
-    
+              </figcaption> -->
+      </div>
+    </div>
   </body>
 </html>
