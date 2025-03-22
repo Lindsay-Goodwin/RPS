@@ -56,13 +56,13 @@
       }
 
       a:link {
-        color: red;
+        color: #970c10;
         background-color: transparent;
         text-decoration: none;
       }
 
       a:visited {
-        color: red;
+        color: #970c10;
         background-color: transparent;
         text-decoration: none;
       }
@@ -98,7 +98,6 @@
       /* Collapsible content */
       .content {
         padding: 10px 15px;
-        display: none;
         overflow: hidden;
         background-color: #f1f1f1;
         margin-bottom: 10px;
@@ -178,8 +177,8 @@
       </div>
     </center>
 
-    <div id="About-me">
-      <button class="collapsible">Latest Updates</button>
+    <details id="About-me">
+      <summary class="collapsible">Latest Updates</summary>
       <div class="content">
         <!--ProjandRes Section-->
         <div class="P-AND-R-LEFT">
@@ -260,11 +259,6 @@
             </ul>
           </div>
 
-          
-          
-          
-          
-          
           <div class="slideshow-container">
             <button class="nav-button prev" onclick="prevSlide()">
               &#9665;
@@ -442,22 +436,14 @@
               &#9655;
             </button>
           </div>
-          
-          
-          
-          
-          
-          
-          
-          
         </div>
       </div>
-    </div>
+    </details>
 
-    <div id="PROJECTS-AND-RESEARCH-TEAM">
-      <button class="collapsible">
+    <details id="PROJECTS-AND-RESEARCH-TEAM">
+      <summary class="collapsible">
         Research and "Goodwin Group Gathering" Regulars
-      </button>
+      </summary>
       <div class="content">
         <!--ProjandRes Section-->
         <div class="P-AND-R-LEFT">
@@ -524,10 +510,10 @@
           </font>
         </div>
       </div>
-    </div>
+    </details>
 
-    <div id="TEACHING">
-      <button class="collapsible">Teaching</button>
+    <details id="TEACHING">
+      <summary class="collapsible">Teaching</summary>
       <div class="content">
         <!--Teaching Section-->
         <div class="TEACHING-MAIN-LEFT">
@@ -586,15 +572,15 @@
           </div>
         </div>
       </div>
-    </div>
+    </details>
 
     <!--ALL of MATRIX section may need to heavily edited or removed entirely, TBD!-->
-    <div
+    <details
       id="Merit and Training for Research, Innovation, and eXcellence (MATRIX)"
     >
-      <button class="collapsible">
+      <summary class="collapsible">
         Merit and Training for Research, Innovation, and eXcellence (MATRIX)
-      </button>
+      </summary>
       <div class="content">
         <!--MATRIX Section-->
         <div class="MATRIX-LEFT">
@@ -616,7 +602,7 @@
           </container>
         </div>
       </div>
-    </div>
+    </details>
 
     <font size="5">
       <center>
@@ -652,27 +638,5 @@
         </a>
       </center>
     </font>
-
-    <script>
-      // JavaScript for collapsible sections
-      const collapsibles = document.querySelectorAll(".collapsible");
-
-      collapsibles.forEach((button) => {
-        button.addEventListener("click", function () {
-          // Toggle the "active" class
-          this.classList.toggle("active");
-
-          // Get the associated content section
-          const content = this.nextElementSibling;
-
-          // Toggle the display of the content section
-          if (content.style.display === "block") {
-            content.style.display = "none";
-          } else {
-            content.style.display = "block";
-          }
-        });
-      });
-    </script>
   </body>
 </html>
