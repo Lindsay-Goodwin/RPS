@@ -11,7 +11,6 @@
       href="https://fonts.googleapis.com/css?family=Montserrat"
     />
 
-
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -24,15 +23,6 @@
         padding-right: 4px;
       }
 
-      .active {
-        display: block;
-      }
-
-      .caption {
-        text-align: center;
-        font-size: 18px;
-        margin-top: 10px;
-      }
 
       a:link {
         color: #970c10;
@@ -57,6 +47,7 @@
         background-color: transparent;
         text-decoration: underline;
       }
+      
       /* Style for collapsible buttons */
       .collapsible {
         background-color: #970c10;
@@ -82,11 +73,6 @@
         border-radius: 5px;
       }
 
-      .section h2 {
-        margin-top: 0;
-        color: #333;
-      }
-
       .section p {
         color: #666;
       }
@@ -109,7 +95,6 @@
       * {
         box-sizing: border-box;
       }
-
 
       .gallery {
         background: black;
@@ -143,14 +128,13 @@
           -webkit-filter 0.3s, filter 0.3s;
         transition: opacity 0.3s, transform 0.3s, filter 0.3s;
       }
-      
-      
+
       .gallery-cell figcaption {
         height: -200px;
         display: block;
         max-width: 100%;
         max-height: 100%;
-      }      
+      }
 
       /* brighten selected image */
       .gallery-cell.is-selected img {
@@ -342,7 +326,6 @@
           </div>
           <script src="flickity.pkgd.min.js"></script>
 
-
           <!-- Flickity HTML init -->
           <div class="main-gallery js-flickity">
             <!--   data-flickity-options='{ "cellAlign": "left", "contain": true }'> -->
@@ -352,19 +335,19 @@
                 src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20230829_071750927.jpg?v=1742623644773"
                 alt="orange tree"
               />
-              <figcaption>Visiting the Mu Radar - Thank you for the tour, Professor
-                  Yamamoto! (Koka, Japan - August 2023)</figcaption>
+              <figcaption>
+                Visiting the Mu Radar - Thank you for the tour, Professor
+                Yamamoto! (Koka, Japan - August 2023)
+              </figcaption>
             </div>
             <div class="gallery-cell">
               <img
                 src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240528_134805205.MP.jpg?v=1742623704437"
                 alt="orange tree"
               />
-              <p class="caption">
-                <span>At the Royal Greenwich Observatory! </span><br /><span>
-                  (London, England - May 2024)</span
-                >
-              </p>
+              <figcaption>
+                At the Royal Greenwich Observatory! (London, England - May 2024)
+              </figcaption>
             </div>
 
             <div class="gallery-cell">
@@ -372,11 +355,9 @@
                 src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240528_145249350.MP.jpg?v=1742623713024"
                 alt="orange tree"
               />
-              <p class="caption">
-                <span>At the Royal Greenwich Observatory! </span><br /><span>
-                  (London, England - May 2024)</span
-                >
-              </p>
+              <figcaption>
+                At the Royal Greenwich Observatory! (London, England - May 2024)
+              </figcaption>
             </div>
 
             <div class="gallery-cell">
@@ -384,10 +365,10 @@
                 src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/20240617_120921.jpg?v=1742625514701"
                 alt="orange tree"
               />
-              <p class="caption">
-                <span>Crawling on the Expanded Owens Valley Solar Array </span
-                ><br /><span> (Owens Valley, USA - June 2024)</span>
-              </p>
+              <figcaption>
+                Crawling on the Expanded Owens Valley Solar Array (Owens Valley,
+                USA - June 2024)
+              </figcaption>
             </div>
 
             <div class="gallery-cell">
@@ -395,11 +376,10 @@
                 src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240731_142431986.MP.jpg?v=1742623724424"
                 alt="orange tree"
               />
-              <p class="caption">
-                <span>Visiting EISCAT3D </span><br /><span>
-                  (Skibotn, Norway - July 2024)</span
-                >
-              </p>
+
+              <figcaption>
+                Visiting EISCAT3D (Skibotn, Norway - July 2024)
+              </figcaption>
             </div>
 
             <div class="gallery-cell">
@@ -407,11 +387,9 @@
                 src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240731_144044489.jpg?v=1742623761442"
                 alt="orange tree"
               />
-              <p class="caption">
-                <span>Visiting EISCAT3D </span><br /><span>
-                  (Skibotn, Norway - July 2024)</span
-                >
-              </p>
+              <figcaption>
+                Visiting EISCAT3D (Skibotn, Norway - July 2024)
+              </figcaption>
             </div>
 
             <div class="gallery-cell">
@@ -419,12 +397,11 @@
                 src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240802_123858455.jpg?v=1742623773894"
                 alt="orange tree"
               />
-              <p class="caption">
-                <span
-                  >Presenting at the 2024 EISCAT Symposium. Thank for the
-                  invite! </span
-                ><br /><span> (Tromso, Norway - August 2024)</span>
-              </p>
+
+              <figcaption>
+                Presenting at the 2024 EISCAT Symposium. Thank for the invite!
+                (Tromso, Norway - August 2024)
+              </figcaption>
             </div>
 
             <div class="gallery-cell">
@@ -432,12 +409,11 @@
                 src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240805_103728608.MP.jpg?v=1742623792996"
                 alt="orange tree"
               />
-              <p class="caption">
-                <span
-                  >Operating EISCAT Tromso (kidding!). Thank for the tour, Erik
-                  Varberg! </span
-                ><br /><span> (Near Tromso, Norway - August 2024)</span>
-              </p>
+
+              <figcaption>
+                Operating EISCAT Tromso (kidding!). Thank for the tour, Erik
+                Varberg! (Near Tromso, Norway - August 2024)
+              </figcaption>
             </div>
 
             <div class="gallery-cell">
@@ -445,12 +421,11 @@
                 src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240911_142701463.MP.jpg?v=1742623812098"
                 alt="orange tree"
               />
-              <p class="caption">
-                <span
-                  >Me, with a totally reasonable car, at the GIGI meeting. Thank
-                  you for the invite! </span
-                ><br /><span> (Boulder, USA - September 2024)</span>
-              </p>
+
+              <figcaption>
+                Me, with a totally reasonable car, at the GIGI meeting. Thank
+                you for the invite! (Boulder, USA - September 2024)
+              </figcaption>
             </div>
 
             <div class="gallery-cell">
@@ -458,11 +433,10 @@
                 src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20241208_182020978.jpg?v=1742625525638"
                 alt="orange tree"
               />
-              <p class="caption">
-                <span>AGU 2024 </span><br /><span>
-                  (Washington, USA - December 2024)</span
-                >
-              </p>
+
+              <figcaption>
+                AGU 2024 (Washington, USA - December 2024)
+              </figcaption>
             </div>
 
             <div class="gallery-cell">
@@ -470,12 +444,10 @@
                 src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20250127_155950182.jpg?v=1742625521518"
                 alt="orange tree"
               />
-              <p class="caption">
-                <span
-                  >Selfie with the upcoming FLARE instrument at PPPL. Thank you
-                  for the tour! </span
-                ><br /><span> (Princeton, USA - January 2025)</span>
-              </p>
+              <figcaption>
+                Selfie with the upcoming FLARE instrument at PPPL. Thank you for
+                the tour! (Princeton, USA - January 2025)
+              </figcaption>
             </div>
 
             <div class="gallery-cell">
@@ -483,14 +455,11 @@
                 src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20250207_003359998.jpg?v=1742623818889"
                 alt="orange tree"
               />
-              <p class="caption">
-                <span
-                  >Presenting a the STAR Monthly Meeting. Thank you for having
-                  me! </span
-                ><br /><span>
-                  (Brookdale Community College, USA - February 2025)</span
-                >
-              </p>
+
+              <figcaption>
+                Presenting a the STAR Monthly Meeting. Thank you for having me!
+                (Brookdale Community College, USA - February 2025)
+              </figcaption>
             </div>
           </div>
         </div>
