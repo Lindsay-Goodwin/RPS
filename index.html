@@ -11,11 +11,31 @@
     />
     <!--Link to CSS Font Sheet, imports the Montserrat font-->
     <style>
-        body { text-align: center; }
-        .slideshow-container { position: relative; max-width: 600px; margin: auto; }
-        .slide { display: none; width: 100%; }
-        .active { display: block; }
-        .nav-button { cursor: pointer; padding: 10px; margin: 5px; }
+      body {
+        text-align: center;
+      }
+      .slideshow-container {
+        position: relative;
+        max-width: 600px;
+        margin: auto;
+      }
+      .slide {
+        display: none;
+        width: 100%;
+      }
+      .active {
+        display: block;
+      }
+      .nav-button {
+        cursor: pointer;
+        padding: 10px;
+        margin: 5px;
+      }
+      .caption {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 10px;
+      }
     </style>
   </head>
 
@@ -107,37 +127,20 @@
               <!--Box to contain titles-->
               <h2 id="NAME">Lindsay V. Goodwin - Assistant Professor</h2>
 
-
-              
-              
               <div class="slideshow-container">
-                <img
-                  class="slide active"
-                  src="https://cdn.glitch.global/d90d898c-ea49-457b-9a88-a5140a129092/20241112_181407.jpg?v=1733102265805"
-                  width="500"
-                  alt="Slide 1"
-                />
-                <img
-                  class="slide"
-                  src="https://cdn.glitch.global/d90d898c-ea49-457b-9a88-a5140a129092/20241112_181407.jpg?v=1733102265805"
-                  width="500"
-                  alt="Slide 2"
-                />
-                <img
-                  class="slide"
-                  src="https://cdn.glitch.global/d90d898c-ea49-457b-9a88-a5140a129092/20241112_181407.jpg?v=1733102265805"
-                  width="500"
-                  alt="Slide 3"
-                />
+        <img class="slide" src="https://cdn.glitch.global/d90d898c-ea49-457b-9a88-a5140a129092/20241112_181407.jpg?v=1733102265805" alt="Slide 1">
+        <p class="caption">Caption for Image 1</p>
+        <img class="slide" src="https://cdn.glitch.global/d90d898c-ea49-457b-9a88-a5140a129092/20241112_181407.jpg?v=1733102265805" alt="Slide 1">
+        <p class="caption">Caption for Image 1</p>
+        <img class="slide" src="https://cdn.glitch.global/d90d898c-ea49-457b-9a88-a5140a129092/20241112_181407.jpg?v=1733102265805" alt="Slide 1">
+        <p class="caption">Caption for Image 1</p>        
+
               </div>
 
               <br />
               <button class="nav-button" onclick="prevSlide()">Previous</button>
               <button class="nav-button" onclick="nextSlide()">Next</button>
 
-              
-              
-              
               <script>
                 let slideIndex = 0;
                 const slides = document.querySelectorAll(".slide");
