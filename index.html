@@ -12,7 +12,8 @@
     <!--Link to CSS Font Sheet, imports the Montserrat font-->
     <style>
       body {
-        text-align: center;
+        font-family: Arial, sans-serif;
+        color: #bfcad0;
       }
       .slideshow-container {
         position: relative;
@@ -22,25 +23,64 @@
       .slide {
         display: none;
         width: 100%;
+        height: 500px;
+        object-fit: cover;
       }
       .active {
         display: block;
-      }
-      .nav-button {
-        cursor: pointer;
-        padding: 10px;
-        margin: 5px;
       }
       .caption {
         text-align: center;
         font-size: 18px;
         margin-top: 10px;
       }
+      .nav-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #3e3e3e;
+        border: #bfcad0;
+        font-size: 30px;
+        cursor: pointer;
+        padding: 10px;
+        color: #bfcad0;
+      }
+      .prev {
+        left: -50px;
+      }
+      .next {
+        right: -50px;
+      }
+    </style>
+    <style>
+      a:link {
+        color: red;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: red;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #970c10;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+
+      a:active {
+        color: #970c10;
+        background-color: transparent;
+        text-decoration: underline;
+      }
     </style>
   </head>
 
   <!--Body Section containing About Me, Projects and Research Team, Teaching, Merit and Training for Research, Innovation, and eXcellence (MATRIX), and ISR Sections-->
-  <body style="background-color: LightGray">
+  <body style="background-color: #3e3e3e">
     <center>
       <div id="NAVIGATION">
         <!--Navigation Section at top of page-->
@@ -57,6 +97,7 @@
               text-decoration: none;
               border-radius: 25px;
               font-family: Arial, sans-serif;
+              font-size: 20px;
             "
           >
             Research and GGG Attendees
@@ -72,6 +113,7 @@
               text-decoration: none;
               border-radius: 25px;
               font-family: Arial, sans-serif;
+              font-size: 20px;
             "
           >
             Teaching</a
@@ -86,6 +128,7 @@
               text-decoration: none;
               border-radius: 25px;
               font-family: Arial, sans-serif;
+              font-size: 20px;
             "
           >
             MATRIX</a
@@ -98,76 +141,23 @@
     <div id="DIVIDER">
       <!--Horizontal Divider between Nav section and About Me section-->
         </nav>
+
+        <div
+          style="background-color: black; padding: 30px 0; margin-top: -60px"
+        ></div>
       </div>
       <div id="HOMEPAGE">
         <!--Homepage/About Me Section-->
         <div class="HP-LEFT">
           <!--Left box of AbMe Section-->
-          <div class="HP-LEFT-IMG">
-            <!--Top left box to contain image -->
-            <!--             <img
-              src="https://cdn.glitch.global/d90d898c-ea49-457b-9a88-a5140a129092/SAAM-1911.4.1_2-000001.jpg?v=1733104524360"
-              alt="AbMe IMG"
-              width="800"
-            />
-            <p>
-        <font size="2">
-              <em
-                >Frederic Edwin Church, Aurora Borealis, 1865, oil on canvas, 56
-                x 83 1/2 in. (142.3 x 212.2 cm), Smithsonian American Art
-                Museum, Gift of Eleanor Blodgett, 1911.4.1</em
-              >
-              </font>
-            </p> -->
-            <!--Img element containing image file and alt text-->
-          </div>
           <div class="HP-LEFT-INFO">
             <!--Bottom left box to contain details-->
             <container class="HP-LEFT-TITLES">
               <!--Box to contain titles-->
               <h2 id="NAME">Lindsay V. Goodwin - Assistant Professor</h2>
 
-              <div class="slideshow-container">
-        <img class="slide" src="https://cdn.glitch.global/d90d898c-ea49-457b-9a88-a5140a129092/20241112_181407.jpg?v=1733102265805" alt="Slide 1">
-        <p class="caption">Caption for Image 1</p>
-        <img class="slide" src="https://cdn.glitch.global/d90d898c-ea49-457b-9a88-a5140a129092/20241112_181407.jpg?v=1733102265805" alt="Slide 1">
-        <p class="caption">Caption for Image 1</p>
-        <img class="slide" src="https://cdn.glitch.global/d90d898c-ea49-457b-9a88-a5140a129092/20241112_181407.jpg?v=1733102265805" alt="Slide 1">
-        <p class="caption">Caption for Image 1</p>        
-
-              </div>
-
               <br />
-              <button class="nav-button" onclick="prevSlide()">Previous</button>
-              <button class="nav-button" onclick="nextSlide()">Next</button>
 
-              <script>
-                let slideIndex = 0;
-                const slides = document.querySelectorAll(".slide");
-
-                function showSlide(index) {
-                  slides.forEach((slide, i) => {
-                    slide.style.display = i === index ? "block" : "none";
-                  });
-                }
-
-                function nextSlide() {
-                  slideIndex = (slideIndex + 1) % slides.length;
-                  showSlide(slideIndex);
-                }
-
-                function prevSlide() {
-                  slideIndex = (slideIndex - 1 + slides.length) % slides.length;
-                  showSlide(slideIndex);
-                }
-
-                function autoSlide() {
-                  nextSlide();
-                  setTimeout(autoSlide, 5000);
-                }
-
-                setTimeout(autoSlide, 5000);
-              </script>
 
               <h3>Email: lindsay.v.goodwin@njit.edu</h3>
             </container>
@@ -212,7 +202,7 @@
       <!--Box containing About Me summary-->
       <center>
         <!--Top right box containing two images and a heading-->
-        <h1 style="color: white; background-color: crimson">About Me</h1>
+        <h1 style="color: white; background-color: #970c10">About Me</h1>
       </center>
 
       <p>
@@ -264,6 +254,224 @@
           </div>
         </li>
       </ul>
+
+      <h3>Upcoming Conferences and Workshops:</h3>
+      <ul>
+        <li>
+          <div class="Button">
+            <a href="https://collab.issibern.ch/incoherentscatter/"
+              >ISSI ISR Working Group Meeting (Bern, Switzerland - April
+              2025)</a
+            >
+          </div>
+        </li>
+
+        <li>
+          <div class="Button">
+            <a href="https://cedarscience.org/2025-joint-cedar-gem-workshop"
+              >2025 Joint CEDAR/GEM Workshop (Des Moines, USA - June 2025)</a
+            >
+          </div>
+        </li>
+
+        <li>
+          <div class="Button">
+            <a href="https://ap-rasc.com/home.php"
+              >URSI AP-RASC (Syndey, Australia - August 2025)</a
+            >
+          </div>
+        </li>
+      </ul>
+
+      <div class="slideshow-container">
+        <button class="nav-button prev" onclick="prevSlide()">&#9665;</button>
+
+        <img
+          class="slide"
+          src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20230829_071750927.jpg?v=1742623644773"
+          alt="Slide 2"
+        />
+        <p class="caption">
+          <span
+            >Visiting the Mu Radar - Thank you for the tour, Professor Yamamoto! </span
+          ><br /><span> (Koka, Japan - August 2023)</span>
+        </p>
+
+        <img
+          class="slide"
+          src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240528_134805205.MP.jpg?v=1742623704437"
+          alt="Slide 3"
+        />
+        <p class="caption">
+          <span>At the Royal Greenwich Observatory! </span><br /><span>
+            (London, England - May 2024)</span
+          >
+        </p>
+
+        <img
+          class="slide"
+          src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240528_145249350.MP.jpg?v=1742623713024"
+          alt="Slide 3"
+        />
+        <p class="caption">
+          <span>At the Royal Greenwich Observatory! </span><br /><span>
+            (London, England - May 2024)</span
+          >
+        </p>
+
+        <img
+          class="slide"
+          src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/20240617_120921.jpg?v=1742625514701"
+          alt="Slide 3"
+        />
+        <p class="caption">
+          <span>Crawling on the Expanded Owens Valley Solar Array </span
+          ><br /><span> (Owens Valley, USA - June 2024)</span>
+        </p>
+
+        <img
+          class="slide"
+          src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240731_142431986.MP.jpg?v=1742623724424"
+          alt="Slide 3"
+        />
+        <p class="caption">
+          <span>Visiting EISCAT3D </span><br /><span>
+            (Skibotn, Norway - July 2024)</span
+          >
+        </p>
+
+        <img
+          class="slide"
+          src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240731_144044489.jpg?v=1742623761442"
+          alt="Slide 3"
+        />
+        <p class="caption">
+          <span>Visiting EISCAT3D </span><br /><span>
+            (Skibotn, Norway - July 2024)</span
+          >
+        </p>
+
+        <img
+          class="slide"
+          src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240802_123858455.jpg?v=1742623773894"
+          alt="Slide 3"
+        />
+        <p class="caption">
+          <span
+            >Presenting at the 2024 EISCAT Symposium. Thank for the invite! </span
+          ><br /><span> (Tromso, Norway - August 2024)</span>
+        </p>
+
+        <img
+          class="slide"
+          src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240805_103728608.MP.jpg?v=1742623792996"
+          alt="Slide 3"
+        />
+        <p class="caption">
+          <span
+            >Operating EISCAT Tromso (kidding!). Thank for the tour, Erik
+            Varberg! </span
+          ><br /><span> (Near Tromso, Norway - August 2024)</span>
+        </p>
+
+        <img
+          class="slide"
+          src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240911_142701463.MP.jpg?v=1742623812098"
+          alt="Slide 3"
+        />
+        <p class="caption">
+          <span
+            >Me, with a totally reasonable car, at the GIGI meeting. Thank you
+            for the invite! </span
+          ><br /><span> (Boulder, USA - September 2024)</span>
+        </p>
+
+        <img
+          class="slide"
+          src="https://cdn.glitch.global/d90d898c-ea49-457b-9a88-a5140a129092/20241112_181407.jpg?v=1733102265805"
+          alt="Slide 1"
+        />
+        <p class="caption">
+          <span>At my office </span><br /><span>
+            (Newark, USA - November 2024)</span
+          >
+        </p>
+
+        <img
+          class="slide"
+          src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20241208_182020978.jpg?v=1742625525638"
+          alt="Slide 3"
+        />
+        <p class="caption">
+          <span>AGU 2024 </span><br /><span>
+            (Washington, USA - December 2024)</span
+          >
+        </p>
+
+        <img
+          class="slide"
+          src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20250127_155950182.jpg?v=1742625521518"
+          alt="Slide 3"
+        />
+        <p class="caption">
+          <span
+            >Selfie with the upcoming FLARE instrument at PPPL. Thank you for
+            the tour! </span
+          ><br /><span> (Princeton, USA - January 2025)</span>
+        </p>
+
+        <img
+          class="slide"
+          src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20250207_003359998.jpg?v=1742623818889"
+          alt="Slide 3"
+        />
+        <p class="caption">
+          <span
+            >Presenting a the STAR Monthly Meeting. Thank you for having me! </span
+          ><br /><span>
+            (Brookdale Community College, USA - February 2025)</span
+          >
+        </p>
+
+        
+              <script>
+                let slideIndex = 0;
+                const slides = document.querySelectorAll(".slide");
+                const captions = document.querySelectorAll(".caption");
+
+                function showSlide(index) {
+                  slides.forEach((slide) => (slide.style.display = "none"));
+                  captions.forEach(
+                    (caption) => (caption.style.display = "none")
+                  );
+                  slides[index].style.display = "block";
+                  captions[index].style.display = "block";
+                }
+
+                function nextSlide() {
+                  slideIndex = (slideIndex + 1) % slides.length;
+                  showSlide(slideIndex);
+                }
+
+                function prevSlide() {
+                  slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+                  showSlide(slideIndex);
+                }
+
+                function autoSlide() {
+                  nextSlide();
+                  setTimeout(autoSlide, 5000);
+                }
+
+                showSlide(slideIndex);
+                setTimeout(autoSlide, 5000);
+              </script>
+        
+        
+        
+        
+        <button class="nav-button next" onclick="nextSlide()">&#9655;</button>
+      </div>
     </div>
 
     <div id="PROJECTS-AND-RESEARCH-TEAM">
@@ -273,7 +481,7 @@
         <div class="PR-LEFT-TOP">
           <!--Top left box to contain title-->
           <center>
-            <h1 style="color: white; background-color: crimson">
+            <h1 style="color: white; background-color: #970c10">
               Research and "Goodwin Group Gathering" Regulars
             </h1>
           </center>
@@ -291,32 +499,6 @@
         Gatherings". Attendees are either folks I supervise and mentor, or folks
         I work closely with.
         <p><em> </em></p>
-        <!--         <div class="PR-LEFT-BOT"> -->
-        <!--Bottom left box to contain content-->
-        <!--          <div class="PR-RECH-MEM">
-            <!--Box to contain boxes of images and titles for each research team member-->
-        <!--            <div class="rectangle">
-              <!--Box containing image, alt text, and subtitle-->
-        <!--              <img src="image1.jpg" alt="Image 1" />
-              <div class="subtitle">Subtitle 1</div>
-            </div>
-            <div class="rectangle">
-              <!--Box containing image, alt text, and subtitle-->
-        <!--              <img src="image2.jpg" alt="Image 2" />
-              <div class="subtitle">Subtitle 2</div>
-            </div>
-            <div class="rectangle">
-              <!--Box containing image, alt text, and subtitle-->
-        <!--              <img src="image3.jpg" alt="Image 3" />
-              <div class="subtitle">Subtitle 3</div>
-            </div>
-            <div class="rectangle">
-              <!--Box containing image, alt text, and subtitle-->
-        <!--              <img src="image4.jpg" alt="Image 4" />
-              <div class="subtitle">Subtitle 4</div>
-            </div>
-          </div>
-        </div>-->
 
         <font size="4">
           <p>
@@ -371,22 +553,11 @@
         <div class="TEACH-LEFT-TITLE">
           <!--Box containing title-->
           <center>
-            <h1 style="color: white; background-color: crimson">Teaching</h1>
+            <h1 style="color: white; background-color: #970c10">Teaching</h1>
           </center>
         </div>
       </div>
     </div>
-
-    <!--<b>My Philosophy:</b> A course is a nature park, the students are
-            park visitors, and the instructor is a well-trained guide. The
-            guide's goal is to get everyone to a beautiful vista, while being
-            mindful of the strengths and weaknesses of the visitors. Some of the
-            visitors may want to climb steep cliffs, while others may just want
-            to walk the well-worn paths. Similarly, educators instruct students,
-            connecting them to their goals while navigating the barriers and the
-            strengths/weaknesses of the students along the way. Accordingly, my
-            teaching and mentoring goal is to create a learning environment that
-            is driven by the needs of the students.-->
 
     <!--Box containing statement-->
     <div class="TEACH-STMT">
@@ -436,28 +607,6 @@
       </ul>
     </div>
 
-    <!--      <div class="TEACHING-MAIN-RIGHT">
-        <!--Right box to hold content-->
-    <!--        <div class="CLASS-NOTES">
-<!--          <!--Box to hold the notes content-->
-    <!--          <div class="NOTES-CONTENT">
-<!--            <!--Box containing notes content-->
-    <!--            <!--Header and button boxes containing text that anchor link to destination-->
-    <!--            <h3>Course Material</h3>
-            <div class="Button"><a href="">Chapter A</a></div>
-            <div class="Button"><a href="">Chapter B</a></div>
-            <div class="Button"><a href="">Chapter C</a></div>
-            <div class="Button"><a href="">Chapter D</a></div>
-            <div class="Button"><a href="">Chapter E</a></div>
-          </div>
-        </div>
-        <div class="FUN-LINKS">
-          <!--Box to hold the links content-->
-
-    <!--        </div>
-<!--      </div> --
-
-
     <!--ALL of MATRIX section may need to heavily edited or removed entirely, TBD!-->
     <div
       id="Merit and Training for Research, Innovation, and eXcellence (MATRIX)"
@@ -468,7 +617,7 @@
         <div id="MATRIX-LEFT-TOP">
           <!--Box containing header-->
           <center>
-            <h1 style="color: white; background-color: crimson">
+            <h1 style="color: white; background-color: #970c10">
               Merit and Training for Research, Innovation, and eXcellence
               (MATRIX)
             </h1>
