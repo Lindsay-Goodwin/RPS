@@ -10,6 +10,8 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Montserrat"
     />
+    
+    <link rel="stylesheet" href="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/flickity.css" media="screen">
 
     <style>
       body {
@@ -18,6 +20,7 @@
         max-width: 800px;
         margin-left: auto;
         margin-right: auto;
+        padding: 0 50px;
       }
       .slideshow-container {
         position: relative;
@@ -87,7 +90,6 @@
         color: white;
         cursor: pointer;
         padding: 10px 15px;
-        width: 100%;
         border: none;
         text-align: left;
         font-size: 30px;
@@ -123,6 +125,12 @@
         text-align: left;
         font-size: 35px;
       }
+      
+      
+      .lindsaydo {
+        width: 100%;
+        max-width: 400px;
+      }
     </style>
   </head>
 
@@ -150,9 +158,8 @@
 
               <div class="container">
                 <!-- Image Column -->
-                <img
+                <img  class="lindsaydo"
                   src="https://cdn.glitch.global/d90d898c-ea49-457b-9a88-a5140a129092/20241112_181407.jpg?v=1733102265805"
-                  width="400px"
                 />
 
                 <font size="4">
@@ -279,41 +286,36 @@
           
           
           
+          <script src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/flickity.pkgd.min.js"></script>
           
           
-          
-          
-          
-          
-          
-          
-          <div class="slideshow-container">
-            <button class="nav-button prev" onclick="prevSlide()">
-              &#9665;
-            </button>
-
-            <img
-              class="slide"
-              src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20230829_071750927.jpg?v=1742623644773"
-              alt="Slide 2"
-            />
-            <p class="caption">
+          <!-- Flickity HTML init -->
+<div class="carousel js-flickity">
+  <!-- images from unsplash.com -->
+  <div class="carousel-cell">
+    <img src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20230829_071750927.jpg?v=1742623644773" alt="orange tree" />
+                <p class="caption">
               <span
                 >Visiting the Mu Radar - Thank you for the tour, Professor
                 Yamamoto! </span
               ><br /><span> (Koka, Japan - August 2023)</span>
             </p>
-
-            <img
-              class="slide"
-              src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240528_134805205.MP.jpg?v=1742623704437"
-              alt="Slide 3"
-            />
-            <p class="caption">
+  </div>
+  <div class="carousel-cell">
+    <img src="https://cdn.glitch.global/27a61624-90dd-46b7-bac0-d50aade35f1f/PXL_20240528_134805205.MP.jpg?v=1742623704437" alt="orange tree" />
+                <p class="caption">
               <span>At the Royal Greenwich Observatory! </span><br /><span>
                 (London, England - May 2024)</span
               >
             </p>
+  </div>
+  
+  
+</div>
+          
+          
+          
+          
 
             <img
               class="slide"
@@ -429,40 +431,11 @@
               >
             </p>
 
-            <script>
-              let slideIndex = 0;
-              const slides = document.querySelectorAll(".slide");
-              const captions = document.querySelectorAll(".caption");
-
-              function showSlide(index) {
-                slides.forEach((slide) => (slide.style.display = "none"));
-                captions.forEach((caption) => (caption.style.display = "none"));
-                slides[index].style.display = "block";
-                captions[index].style.display = "block";
-              }
-
-              function nextSlide() {
-                slideIndex = (slideIndex + 1) % slides.length;
-                showSlide(slideIndex);
-              }
-
-              function prevSlide() {
-                slideIndex = (slideIndex - 1 + slides.length) % slides.length;
-                showSlide(slideIndex);
-              }
-
-              function autoSlide() {
-                nextSlide();
-                setTimeout(autoSlide, 5000);
-              }
-
-              showSlide(slideIndex);
-              setTimeout(autoSlide, 5000);
-            </script>
-
-            <button class="nav-button next" onclick="nextSlide()">
-              &#9655;
-            </button>
+          
+          
+          
+          
+          
           </div>
         </div>
       </div>
