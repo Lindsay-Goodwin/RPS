@@ -161,7 +161,7 @@ body {
 .carousel-cell {
   width: 70%;
   min-height: 400px;
-  margin-bottom: 4em;
+  margin-bottom: 5em;
   /* flex-box, center image in cell */
   display: -webkit-box;
   display: -webkit-flex;
@@ -190,7 +190,7 @@ body {
   max-width: 60%;
   max-height: 100%;
   position:absolute; 
-  bottom:-25px;
+  bottom:-70px;
   
 /*   background-color: #3e3e3e; */
   /* offset-x | offset-y | blur-radius | color */
