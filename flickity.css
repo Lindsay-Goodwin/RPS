@@ -192,10 +192,9 @@ body {
   position:absolute; 
   bottom:-70px;
   
-/*   background-color: #3e3e3e; */
   /* offset-x | offset-y | blur-radius | color */
-text-shadow: 2px 2px 4px #3e3e3e;
-  color: white;
+/* text-shadow: 2px 2px 4px gunmetal-gray; */
+  color: gunmetal-gray;
   padding: 2px;
   text-align: left;
   font-weight: bold;
