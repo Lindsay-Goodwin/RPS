@@ -186,13 +186,14 @@ body {
 
 .carousel-cell figcaption {
   display: block;
-  max-width: 100%;
+  max-width: 70%;
   max-height: 100%;
   position:absolute; 
-  width:100%; 
-  bottom:0px;
+  bottom:10px;
   
-  background-color: #3e3e3e;
+/*   background-color: #3e3e3e; */
+  /* offset-x | offset-y | blur-radius | color */
+text-shadow: 4px 4px 8px black;
   color: white;
   padding: 2px;
   text-align: left;
