@@ -3,6 +3,17 @@
 <head>
     <title>Simple Table</title>
     <style>
+            body {
+        font-family: Arial, sans-serif;
+        color: #3e3e3e;
+        max-width: 800px;
+        min-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 4px;
+        padding-right: 4px;
+      }
+
         table {
             width: 50%;
             border-collapse: collapse;
@@ -21,6 +32,7 @@
         .title {
             font-weight: bold;
             font-size: 18px;
+            text-decoration: underline;
         }
         .requester {
             font-style: italic;
@@ -30,7 +42,6 @@
         }
         .note {
             font-weight: bold;
-            color: red;
         }
 
     </style>
@@ -49,14 +60,14 @@
             <td>December 2024</td>
             <td> 1 and 30</td>
             <td> 15 </td>
-            <td>Dynamics</td>
+          <td><p style="color:red;">Dynamics</p></td>
             <td>10 Days</td>
         </tr>
         <tr>
             <td>January</td>
             <td> 29 </td>
             <td> 13 </td>
-            <td>Dynamics</td>
+            <td><p style="color:red;">Dynamics</p></td>
             <td>10 Days</td>
         </tr>
         <tr>
@@ -70,14 +81,14 @@
             <td> 1 to 14 </td>
             <td>  </td>
             <td>  </td>
-            <td>Dynamics</td>
+            <td><p style="color:red;">Dynamics</p></td>
             <td>10 Days</td>
         </tr>
         <tr>
             <td> 19 to 28 </td>
             <td>  </td>
             <td>  </td>
-            <td>ICME</td>
+            <td><p style="color:blue;">ICME</p></td>
             <td>5 Days</td>
         </tr>
         <tr>
@@ -91,21 +102,21 @@
             <td> 1 to 7 </td>
             <td>  </td>
             <td>  </td>
-            <td>ICME</td>
+          <td><p style="color:blue;">ICME</p></td>
             <td>5 Days</td>
         </tr>
         <tr>
             <td> 8 to 17 </td>
             <td>  </td>
             <td>  </td>
-            <td>Dynamo</td>
+          <td><p style="color:brown;">Dynamo</p></td>
             <td>5 Days</td>
         </tr>
         <tr>
             <td> 17 to 31 </td>
             <td>  </td>
             <td>  </td>
-            <td>ICME</td>
+            <td><p style="color:blue;">ICME</p></td>
             <td>5 Days</td>
         </tr>
 
@@ -114,7 +125,7 @@
             <td>April</td>
             <td> 27 </td>
             <td> 12 </td>
-            <td>Dynamo</td>
+          <td><p style="color:brown;">Dynamo</p></td>
             <td>5 Days</td>
         </tr>
 
@@ -122,7 +133,7 @@
             <td>May</td>
             <td> 26 </td>
             <td> 12 </td>
-            <td>Dynamo</td>
+          <td><p style="color:brown;">Dynamo</p></td>
             <td>5 Days</td>
         </tr>
 
@@ -156,7 +167,7 @@
             <td>September</td>
             <td> 21 </td>
             <td> 7 </td>
-            <td>CONGS-25</td>
+            <td><p style="color:green;">CONGS-25</p></td>
             <td>5 Days</td>
         </tr>
 
@@ -165,7 +176,7 @@
             <td>October</td>
             <td> 21 </td>
             <td> 6 </td>
-            <td>CONGS-25</td>
+          <td><p style="color:green;">CONGS-25</p></td>
             <td>5 Days</td>
         </tr>
 
@@ -195,7 +206,7 @@
   
 
     <div class="campaign">
-        <div class="title">Dynamics: Dynamics, electrodynamics, temperature and electron density in the lower and upper thermosphere and ionosphere during strong polar vortex conditions</div>
+      <div class="title"><p style="color:red;">Dynamics: Dynamics, electrodynamics, temperature and electron density in the lower and upper thermosphere and ionosphere during strong polar vortex conditions</p></div>
         <div class="requester">Requester: Goncharenko</div>
         <div class="section"><strong>Primary Parameters to Measure, including requested time resolution:</strong> Electron density, electron and ion temperatures from lowest possible altitude throughout the F-region. Temporal resolution can be sacrificed and data integration period increased in order to obtain data at lower altitudes.</div>
         <div class="section"><strong>Secondary Parameters to Measure:</strong> Zonal and meridional components of neutral wind in the lower thermosphere (95-140km), ExB drift, F-region meridional wind.</div>
@@ -204,7 +215,7 @@
     </div>
 
     <div class="campaign">
-        <div class="title">ICME: Geomagnetic storm triggered by ICME</div>
+      <div class="title"><p style="color:blue;">ICME: Geomagnetic storm triggered by ICME</p></div>
         <div class="requester">Requester: Aikio</div>
         <div class="section"><strong>Primary Parameters to Measure, including requested time resolution:</strong> Plasma parameters: Ne, Te, Ti, Vi, (the basic time resolution of the measurement) 1 min or shorter.</div>
         <div class="section"><strong>Secondary Parameters to Measure:</strong> Ion velocity vectors and electric fields (analyzed from ion velocity measurements along several directions in the F-region), time resolution 1-5 min.</div>
@@ -213,7 +224,7 @@
     </div>
 
     <div class="campaign">
-        <div class="title">Dynamo: Solar wind-magnetosphere-ionosphere and thermosphere disturbance wind dynamo effects over the storm-time upper atmosphere dynamics and electrodynamics</div>
+      <div class="title"><p style="color:brown;">Dynamo: Solar wind-magnetosphere-ionosphere and thermosphere disturbance wind dynamo effects over the storm-time upper atmosphere dynamics and electrodynamics</p></div>
         <div class="requester">Requester: Navarro</div>
         <div class="section"><strong>Primary Parameters to Measure, including requested time resolution:</strong> Plasma drifts throughout the F-region up to highest altitude possible. Temporal resolution of 5 mins depending on SNR. We might request reprocessing of data for 1-min resolution for specific time periods (mostly during daytime).</div>
         <div class="section"><strong>Secondary Parameters to Measure:</strong> Zonal and meridional thermospheric neutral winds from SDI and FPI support instrumentation at ISR locations or nearby. If possible, coherent backscatter observations from AMISR-14 system at Jicamarca for support of tracking irregularities at equatorial latitudes.</div>
@@ -222,12 +233,12 @@
     </div>
 
     <div class="campaign">
-        <div class="title">CONGS-25: 2025 Coordinated Observation of Geospace Storm (CONGS-25)</div>
+      <div class="title"><p style="color:green;">CONGS-25: 2025 Coordinated Observation of Geospace Storm (CONGS-25)</p></div>
         <div class="requester">Requester: Zhang</div>
-        <div class="section"><strong>Primary Parameters to Measure, including requested time resolution:</strong> Basic ISR parameters (Ne, Te, Ti, and Vo) with 2-3 min integration time...</div>
-        <div class="section"><strong>Secondary Parameters to Measure:</strong> Resolved ion velocity vector locally or regionally...</div>
-        <div class="section"><strong>Requested radars:</strong> PFISR, RISR-N, RISR-C, EISCAT (mainland and Svalbard), Millstone Hill...</div>
-        <div class="note">NOTE 4: A 5-day campaign on alert basis...</div>
+        <div class="section"><strong>Primary Parameters to Measure, including requested time resolution:</strong> Basic ISR parameters (Ne, Te, Ti, and Vo) with typical 2-3 min integration time. If possible, high temporal resolution plasma-line electron density data.</div>
+        <div class="section"><strong>Secondary Parameters to Measure:</strong> Resolved ion velocity vector locally or regionally; thermospheric winds and temperature</div>
+        <div class="section"><strong>Requested radars:</strong> PFISR, RISR-N, RISR-C, EISCAT (mainland and Svalbard), Millstone Hill, Jicamarca, Sanya, Kharkiv, QJISR, Irkutsk, and PANSY</div>
+        <div class="note">A 5-day campaign on alert basis. The exact dates will be determined based on the geomagnetic activity forecasts. The PIs will communicate with the facilities, issue observation alerts and announce the kickoff time approximately 3 days ahead of the campaign start.</div>
     </div>
   
   
