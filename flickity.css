@@ -155,7 +155,7 @@ body {
 }
 
 .carousel {
-  background: black;
+  background: #bfcad0;
 }
 
 .carousel-cell {
@@ -186,6 +186,22 @@ body {
     -webkit-filter 0.3s, filter 0.3s;
   transition: opacity 0.3s, transform 0.3s, filter 0.3s;
 }
+
+
+.carousel-cell figcaption {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  
+  background-color: #3e3e3e;
+  color: white;
+  padding: 2px;
+  text-align: left;
+}
+
+
+
+
 
 /* brighten selected image */
 .carousel-cell.is-selected img {
@@ -237,3 +253,4 @@ body {
 .flickity-prev-next-button:disabled {
   display: none;
 }
+
