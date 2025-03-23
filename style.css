@@ -1,0 +1,79 @@
+    <style>
+      :root {
+        --gunmetal-gray: #3e3e3e;
+        --celadon: #738580;
+        --slate: #bfcad0;
+        --red: #970c10;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        color: #3e3e3e;
+        max-width: 800px;
+        min-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 4px;
+        padding-right: 4px;
+      }
+
+      a:link {
+        color: #970c10;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: #970c10;
+        background-color: transparent;
+      }
+
+      a:hover {
+        color: #970c10;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+
+      a:active {
+        color: #970c10;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+
+      /* Style for collapsible buttons */
+      .collapsible {
+        background-color: #970c10;
+        color: white;
+        cursor: pointer;
+        padding: 10px 15px;
+        border: none;
+        text-align: left;
+        font-size: 1.8em;
+        margin: 5px 0;
+      }
+
+      .collapsible:hover {
+        background-color: #3e3e3e;
+      }
+
+      /* Collapsible content */
+      .content {
+        padding: 20px;
+        overflow: hidden;
+        background-color: #f1f1f1;
+        margin-bottom: 10px;
+        border-radius: 5px;
+      }
+
+      .section p {
+        color: #666;
+      }
+
+      header {
+        background-color: #3e3e3e;
+        color: white;
+        padding: 20px;
+        text-align: left;
+        font-size: 35px;
+      }
+    </style>
