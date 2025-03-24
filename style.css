@@ -79,6 +79,7 @@ header {
 table {
   width: 50%;
   border-collapse: collapse;
+  background-color: white;
 }
 th,
 td {
