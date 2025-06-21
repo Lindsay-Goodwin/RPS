@@ -155,7 +155,7 @@ body {
 }
 
 .carousel {
-  background: #bfcad0;
+  background: var(--celadon);
 }
 
 .carousel-cell {

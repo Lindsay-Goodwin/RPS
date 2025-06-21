@@ -1,65 +1,67 @@
 :root {
   --gunmetal-gray: #3e3e3e;
-  --celadon: #738580;
+  --celadon: #94c0b4;
   --slate: #bfcad0;
-  --red: #970c10;
+  --red: #702283;
+  /* https://colorhunt.co/palette/70228396207176b39dfdb44b */
 }
 
 body {
   font-family: Arial, sans-serif;
-  color: #3e3e3e;
+  color: var(--gunmetal-gray);
   max-width: 800px;
   min-width: 320px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 4px;
   padding-right: 4px;
+  background-color: var(--celadon)
 }
 
 a:link {
-  color: #970c10;
+  color: var(--red);
   background-color: transparent;
   text-decoration: none;
 }
 
 a:visited {
-  color: #970c10;
+  color: var(--red);
   background-color: transparent;
 }
 
 a:hover {
-  color: #970c10;
+  color: var(--red);
   background-color: transparent;
   text-decoration: underline;
 }
 
 a:active {
-  color: #970c10;
+  color: var(--red);
   background-color: transparent;
   text-decoration: underline;
 }
 
 /* Style for collapsible buttons */
 .collapsible {
-  background-color: #970c10;
-  color: white;
+  /* background-color: var(--red); */
+  color: var(--red);
   cursor: pointer;
   padding: 10px 15px;
   border: none;
   text-align: left;
   font-size: 1.8em;
-  margin: 5px 0;
+  margin: 1px 0;
 }
 
 .collapsible:hover {
-  background-color: #3e3e3e;
+  background-color: var(--slate);
 }
 
 /* Collapsible content */
 .content {
   padding: 20px;
   overflow: hidden;
-  background-color: #f1f1f1;
+  background-color: white;
   margin-bottom: 10px;
   border-radius: 5px;
 }
@@ -69,11 +71,10 @@ a:active {
 }
 
 header {
-  background-color: #3e3e3e;
-  color: white;
+  color: var(--red);
   padding: 20px;
   text-align: left;
-  font-size: 35px;
+  font-size: 42px;
 }
 
 table {
@@ -88,7 +89,7 @@ td {
   text-align: left;
 }
 th {
-  background-color: #f2f2f2;
+  background-color: white;
 }
 .campaign {
   margin-bottom: 20px;
@@ -106,4 +107,15 @@ th {
 }
 .note {
   font-weight: bold;
+}
+
+.footer-image {
+  margin-top: 10px;  
+}
+
+.footer-image span {
+  margin-top: 10px;
+  margin: 5px;  
+  display: block;  
+  font-style: italic;
 }
